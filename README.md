@@ -8,7 +8,9 @@ On docker client side to access this private registry server, use **[host_ip]:50
 
 And be sure to add [--registry-mirror=http://[host_ip]:5000](https://github.com/docker/distribution/blob/master/docs/mirror.md#configuring-the-docker-daemon) startup parameter in client side docker engine.
 
-* **Note**: since it is a pure http conduit registry server, so be sure to add [--insecure-registry](https://docs.docker.com/registry/insecure/#deploying-a-plain-http-registry) startup parameter in client-side docker engine.
+**Note**: 
+1. Since it is a pure http conduit registry server, so be sure to add [--insecure-registry](https://docs.docker.com/registry/insecure/#deploying-a-plain-http-registry) startup parameter in client-side docker engine.
+1. Currently there's no way to remove cached docker images in the [volume](https://docs.docker.com/engine/userguide/dockervolumes/#data-volumes) called *registry_data*, which is the data volume of private registry server.
 
 <hr/>
 
