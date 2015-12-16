@@ -1,6 +1,7 @@
 server:
   build: distribution
   container_name: docker-registry-cache-server
+  mem_limit: 2G
   ports: 
     - "5000:5000"
   restart: always
