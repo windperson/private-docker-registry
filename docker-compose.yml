@@ -1,8 +1,8 @@
 server:
   build: distribution
-  container_name: docker-registry-server
+  container_name: docker-registry-cache-server
   ports: 
     - "5000:5000"
   restart: always
   volumes: 
-    - registry_data:/var/lib/registry
+    - registry_cache_data:/var/lib/registry
